@@ -11,7 +11,13 @@
     "vskstudio/takt-symfony": "^0.1"
   },
   "autoload": { "psr-4": { "App\\": "src/" } },
-  "config": { "allow-plugins": { "php-http/discovery": true } },
+  "config": {
+    "allow-plugins": {
+      "php-http/discovery": true
+    },
+    "platform": {
+    }
+  },
   "scripts": { "build": "@php verify.php" },
   "minimum-stability": "stable"
 }

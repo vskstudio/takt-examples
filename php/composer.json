@@ -9,7 +9,13 @@
     "nyholm/psr7": "^1.8",
     "symfony/http-client": "^6.4 || ^7.0"
   },
-  "config": { "allow-plugins": { "php-http/discovery": true } },
+  "config": {
+    "allow-plugins": {
+      "php-http/discovery": true
+    },
+    "platform": {
+    }
+  },
   "scripts": { "build": "@php verify.php" },
   "minimum-stability": "stable"
 }
