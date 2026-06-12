@@ -1,0 +1,30 @@
+---
+// The Takt integration (astro.config.mjs) already boots analytics + pageviews.
+// This page shows the client API for a custom event with props + revenue.
+const title = 'Takt + Astro example'
+---
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <main>
+      <h1>{title}</h1>
+      <p>Open the console and click the button to fire a tracked event.</p>
+      <button id="buy">Buy the pro plan</button>
+    </main>
+
+    <script>
+      import { track } from '@vskstudio/takt-astro'
+
+      document.getElementById('buy')?.addEventListener('click', () => {
+        track('Purchase', {
+          props: { plan: 'pro' },
+          revenue: { amount: '29.00', currency: 'EUR' },
+        })
+      })
+    </script>
+  </body>
+</html>
