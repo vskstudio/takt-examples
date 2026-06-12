@@ -1,0 +1,15 @@
+{
+  "name": "vskstudio/takt-example-laravel",
+  "description": "Minimal Laravel Takt example: @takt Blade directive + Takt facade for server-side events.",
+  "type": "project",
+  "license": "MIT",
+  "require": {
+    "php": ">=8.1",
+    "laravel/framework": "^11.0 || ^12.0",
+    "vskstudio/takt-laravel": "^0.1"
+  },
+  "autoload": { "psr-4": { "App\\": "app/" } },
+  "config": { "allow-plugins": { "php-http/discovery": true } },
+  "scripts": { "build": "@php verify.php" },
+  "minimum-stability": "stable"
+}

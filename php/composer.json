@@ -1,0 +1,15 @@
+{
+  "name": "vskstudio/takt-example-php",
+  "description": "Minimal framework-agnostic Takt example: render the snippet and send a server-to-server event.",
+  "type": "project",
+  "license": "MIT",
+  "require": {
+    "php": ">=8.1",
+    "vskstudio/takt-core-php": "^0.1",
+    "nyholm/psr7": "^1.8",
+    "symfony/http-client": "^6.4 || ^7.0"
+  },
+  "config": { "allow-plugins": { "php-http/discovery": true } },
+  "scripts": { "build": "@php verify.php" },
+  "minimum-stability": "stable"
+}
