@@ -2,7 +2,12 @@ import { init, track, pageview } from '@vskstudio/takt-core'
 
 // init() boots the shared instance and fires the initial (auto) pageview.
 // excludeLocalhost is disabled so events fire during local dev.
-init({ domain: 'example.com', auto: true, excludeLocalhost: false })
+init({
+  domain: 'example.com',
+  auto: true,
+  excludeLocalhost: false,
+  // scriptOrigin: 'https://stats.example.com', // first-party : sert le tracker depuis votre domaine (anti-adblock)
+})
 
 const button = document.querySelector<HTMLButtonElement>('#buy')
 button?.addEventListener('click', () => {

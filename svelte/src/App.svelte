@@ -12,6 +12,7 @@
 </script>
 
 <!-- Boots core, fires the initial pageview, wires SPA nav. -->
+<!-- scriptOrigin="https://stats.example.com" : sert le tracker depuis votre domaine (first-party / anti-adblock) -->
 <Takt domain="example.com" endpoint="/api/event" excludeLocalhost={false} />
 
 <main>

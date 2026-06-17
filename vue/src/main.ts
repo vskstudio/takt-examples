@@ -11,6 +11,7 @@ app.use(TaktPlugin, {
   domain: 'example.com',
   endpoint: 'https://example.com/api/event',
   excludeLocalhost: false,
+  // scriptOrigin: 'https://stats.example.com', // first-party : sert le tracker depuis votre domaine (anti-adblock)
 })
 
 app.mount('#app')

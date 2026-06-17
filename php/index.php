@@ -13,6 +13,7 @@ $snippet = (new SnippetRenderer(new Options(
     domain: 'example.com',
     endpoint: 'https://takt.example.com',
     mode: Mode::Cdn,
+    // scriptOrigin: 'https://stats.example.com', // first-party : sert le tracker depuis votre domaine (anti-adblock)
     // Fire events during local development (Takt's privacy default is true).
     excludeLocalhost: false,
 )))->render();

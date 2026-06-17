@@ -9,6 +9,7 @@ bootstrapApplication(AppComponent, {
       endpoint: '/api/event',
       outbound: true,
       excludeLocalhost: false,
+      // scriptOrigin: 'https://stats.example.com', // first-party : sert le tracker depuis votre domaine (anti-adblock)
     }),
   ],
 }).catch((err) => console.error(err));

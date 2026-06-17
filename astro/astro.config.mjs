@@ -8,6 +8,7 @@ import takt from '@vskstudio/takt-astro'
 //   import Takt from '@vskstudio/takt-astro/Takt.astro'  ->  <Takt domain="example.com" /> in <head>
 export default defineConfig({
   integrations: [
+    // scriptOrigin: 'https://stats.example.com' -> first-party : sert le tracker depuis votre domaine (anti-adblock)
     takt({ domain: 'example.com', endpoint: '/api/event', excludeLocalhost: false }),
   ],
 })

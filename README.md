@@ -43,6 +43,12 @@ The PHP examples render the browser snippet server-side; see each folder's
 
 Each example sets `excludeLocalhost: false` so events fire during local development (Takt's privacy default is `true`). Point `endpoint` at your own Takt instance to collect them.
 
+## First-party / anti-adblock
+
+Each example also ships a commented-out `scriptOrigin` option (JS init/component), `script_origin` (Laravel/Symfony config) or the `data-script-origin` attribute (browser snippet). When set, the tracker and event collection are served from a domain you control (e.g. `https://stats.example.com`), so ad-blockers can no longer tell analytics traffic apart from your own site. Uncomment the line and point it at your custom first-party Takt domain to enable it.
+
+See the Takt docs guide **`/docs/guides/domaine-personnalise`** for how to set up the first-party domain.
+
 ## License
 
 MIT
