@@ -5,6 +5,7 @@ import { init, track, pageview } from '@vskstudio/takt-core'
 init({
   domain: 'example.com',
   auto: true,
+  notFound: true,
   excludeLocalhost: false,
   // scriptOrigin: 'https://stats.example.com', // first-party : sert le tracker depuis votre domaine (anti-adblock)
 })

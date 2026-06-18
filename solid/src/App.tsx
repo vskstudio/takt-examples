@@ -18,7 +18,7 @@ const App: Component = () => (
   // domain + default /api/event endpoint; <Takt> fires the initial pageview.
   // excludeLocalhost={false} so events fire during local dev.
   // scriptOrigin="https://stats.example.com" : sert le tracker depuis votre domaine (first-party / anti-adblock)
-  <Takt domain="example.com" endpoint="/api/event" excludeLocalhost={false}>
+  <Takt domain="example.com" endpoint="/api/event" track404 excludeLocalhost={false}>
     <main>
       <h1>Takt + SolidJS</h1>
       <BuyButton />

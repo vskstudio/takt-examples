@@ -8,6 +8,7 @@ bootstrapApplication(AppComponent, {
       domain: 'example.com',
       endpoint: '/api/event',
       outbound: true,
+      track404: true,
       excludeLocalhost: false,
       // scriptOrigin: 'https://stats.example.com', // first-party : sert le tracker depuis votre domaine (anti-adblock)
     }),

@@ -10,6 +10,7 @@ const app = createApp(App)
 app.use(TaktPlugin, {
   domain: 'example.com',
   endpoint: 'https://example.com/api/event',
+  track404: true,
   excludeLocalhost: false,
   // scriptOrigin: 'https://stats.example.com', // first-party : sert le tracker depuis votre domaine (anti-adblock)
 })

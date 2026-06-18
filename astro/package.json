@@ -8,8 +8,8 @@
     "preview": "astro preview"
   },
   "dependencies": {
-    "@vskstudio/takt-astro": "^0.2.1",
-    "@vskstudio/takt-core": "^0.2.0",
+    "@vskstudio/takt-astro": "^0.4.2",
+    "@vskstudio/takt-core": "^0.4.2",
     "astro": "^5.0.0"
   },
   "devDependencies": {

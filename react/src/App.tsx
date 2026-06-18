@@ -6,7 +6,7 @@ import { Takt, TaktEvent, useTakt, useTaktEvent } from '@vskstudio/takt-react'
 export default function App() {
   return (
     // scriptOrigin="https://stats.example.com" : sert le tracker depuis votre domaine (first-party / anti-adblock)
-    <Takt domain="example.com" endpoint="/api/event" outbound files spa excludeLocalhost={false}>
+    <Takt domain="example.com" endpoint="/api/event" outbound files spa track404 excludeLocalhost={false}>
       <main>
         <h1>Takt React Example</h1>
         <BuyButton />
