@@ -1,12 +1,20 @@
 name: wordpress-e2e
 
 # The WordPress example boots a real WP + WooCommerce stack (Docker via wp-env)
-# and consumes the published Takt plugin release. It is kept on a manual trigger
-# so the main `ci` pipeline stays green until vskstudio/takt-wordpress has a
-# published release. Once it does, add `push:` / `pull_request:` here (scoped to
-# the `wordpress/**` path) to run it automatically.
+# and consumes the published Takt plugin release (vskstudio/takt-wordpress).
+# Scoped to the `wordpress/**` path (plus this workflow) so the heavy Docker run
+# only fires when the WordPress example changes; `workflow_dispatch` stays for
+# manual reruns.
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - 'wordpress/**'
+      - '.github/workflows/wordpress-e2e.yml'
+  pull_request:
+    paths:
+      - 'wordpress/**'
+      - '.github/workflows/wordpress-e2e.yml'
 
 permissions:
   contents: read
