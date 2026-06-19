@@ -1,0 +1,13 @@
+{
+  "plugins": [
+    "https://github.com/vskstudio/takt-wordpress/releases/latest/download/takt-analytics.zip",
+    "https://downloads.wordpress.org/plugin/woocommerce.zip"
+  ],
+  "mappings": {
+    "wp-content/takt-e2e": "./e2e/wp"
+  },
+  "config": {
+    "WP_DEBUG": true,
+    "WP_DEBUG_LOG": true
+  }
+}

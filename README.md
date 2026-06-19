@@ -18,6 +18,7 @@ Copy any folder, run it, and adapt.
 | [`php`](php) | [`vskstudio/takt-core-php`](https://packagist.org/packages/vskstudio/takt-core-php) | Plain PHP 8.1+, no framework |
 | [`laravel`](laravel) | [`vskstudio/takt-laravel`](https://packagist.org/packages/vskstudio/takt-laravel) | Laravel 11/12 |
 | [`symfony`](symfony) | [`vskstudio/takt-symfony`](https://packagist.org/packages/vskstudio/takt-symfony) | Symfony 6.4/7 bundle |
+| [`wordpress`](wordpress) | [`takt-wordpress`](https://github.com/vskstudio/takt-wordpress) | WordPress + WooCommerce, verified end-to-end |
 
 ## Run one
 
@@ -40,6 +41,10 @@ composer run build    # resolves the published package and renders the snippet
 
 The PHP examples render the browser snippet server-side; see each folder's
 `track.php`/controller for sending server-to-server events.
+
+WordPress is different: it needs a database, so the [`wordpress`](wordpress) example
+runs a real WP + WooCommerce stack in Docker (via `wp-env`) and verifies the plugin
+end-to-end with Playwright. See its [README](wordpress/README.md) — it needs Docker.
 
 Each example sets `excludeLocalhost: false` so events fire during local development (Takt's privacy default is `true`). Point `endpoint` at your own Takt instance to collect them.
 
