@@ -7,6 +7,9 @@ init({
   auto: true,
   notFound: true,
   excludeLocalhost: false,
+  // Advanced options (Takt 0.5):
+  sampleRate: 1, // fraction of visitors to track (0–1); lower it to sample, e.g. 0.25
+  tagged: true, // autocapture clicks on [data-takt-tag] elements
   // scriptOrigin: 'https://stats.example.com', // first-party : sert le tracker depuis votre domaine (anti-adblock)
 })
 

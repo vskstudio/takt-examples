@@ -54,6 +54,33 @@ Each example also ships a commented-out `scriptOrigin` option (JS init/component
 
 See the Takt docs guide **`/docs/guides/domaine-personnalise`** for how to set up the first-party domain.
 
+## Advanced options (Takt 0.5)
+
+Each example also wires at least one of the advanced tracker options introduced in
+Takt 0.5, so you can see the idiomatic spelling per framework (component prop,
+plugin/config key, `data-*` attribute, or `init()` field):
+
+| Option | What it does |
+|--------|--------------|
+| `sampleRate` | Fraction of visitors to track (`0`–`1`); lower it to sample. |
+| `trackQuery` | Keep the query string on pageview paths instead of stripping it. |
+| `queryParams` | Allowlist of query params to keep when `trackQuery` is on. |
+| `scrubUrl` | A function that rewrites each URL before it is sent (dev-controlled). |
+| `enabled` | Master kill-switch — set to `false` to disable all tracking at runtime. |
+| `tagged` | Autocapture clicks on `[data-takt-tag]` elements. |
+
+Where each option shows up: `vanilla` (`sampleRate`, `tagged`), `react` (`scrubUrl`,
+`tagged`), `vue` (`trackQuery`, `queryParams`), `svelte` (`scrubUrl`), `solid`
+(`sampleRate`), `angular` (`tagged`), `astro` (`trackQuery`, `queryParams`,
+`scrubUrl`).
+
+`scrubUrl` is a function, so it can't be a `data-*` attribute or survive a JSON
+config island. In the JS wrappers it is a real prop; for PHP it requires the new
+`Mode::Sdk` renderer, which emits a full `import{init};init({…})` ES module — the
+[`php`](php) example shows `Mode::Sdk` + `scrubUrl`, and the
+[`laravel`](laravel)/[`symfony`](symfony) configs demonstrate the `data-*` options
+(with `scrub_url` + `mode: sdk` shown as a commented switch).
+
 ## License
 
 MIT

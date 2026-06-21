@@ -7,3 +7,13 @@ takt:
     mode: 'cdn'
     # Fire events during local development (Takt's privacy default is true).
     exclude_localhost: false
+
+    # Advanced options (Takt 0.5). Rendered as data-* attributes; a null/default
+    # value is simply omitted.
+    sample_rate: 1 # fraction of visitors to track (0–1); lower it to sample
+    track_query: true # keep the query string on pageviews...
+    query_params: ['utm_source', 'utm_medium', 'utm_campaign'] # ...but only these
+    # respect_dnt: false # disable the Do-Not-Track short-circuit
+    # scrub_url is a JS function: set mode: 'sdk' to render init({...}) and
+    # uncomment the line below (it throws in cdn/inline/asset mode).
+    # scrub_url: '(u) => u.split("#")[0]'
