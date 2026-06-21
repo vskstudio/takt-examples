@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "79036ca526639bc55e2be85d7b86034c",
+    "content-hash": "c92edb2b3f2cc03839d6b33810524cbb",
     "packages": [
         {
             "name": "nyholm/psr7",
@@ -2902,16 +2902,16 @@
         },
         {
             "name": "vskstudio/takt-core-php",
-            "version": "v0.1.2",
+            "version": "v0.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vskstudio/takt-core-php.git",
-                "reference": "48ebcb35ebd89fbbbba8039e1b72c5c970de9efb"
+                "reference": "b148357c23192d235cba3e2dd30b704a5abb392a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vskstudio/takt-core-php/zipball/48ebcb35ebd89fbbbba8039e1b72c5c970de9efb",
-                "reference": "48ebcb35ebd89fbbbba8039e1b72c5c970de9efb",
+                "url": "https://api.github.com/repos/vskstudio/takt-core-php/zipball/b148357c23192d235cba3e2dd30b704a5abb392a",
+                "reference": "b148357c23192d235cba3e2dd30b704a5abb392a",
                 "shasum": ""
             },
             "require": {
@@ -2956,20 +2956,20 @@
                 "issues": "https://github.com/vskstudio/takt-core-php/issues",
                 "source": "https://github.com/vskstudio/takt-core-php"
             },
-            "time": "2026-06-12T22:13:10+00:00"
+            "time": "2026-06-19T19:05:16+00:00"
         },
         {
             "name": "vskstudio/takt-symfony",
-            "version": "v0.1.1",
+            "version": "v0.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vskstudio/takt-symfony.git",
-                "reference": "cdddf3739aa7a0345f721cc4e09c794a150e8bb6"
+                "reference": "e21ea8c3a4901daa800c4c2e85b1494f8515df96"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vskstudio/takt-symfony/zipball/cdddf3739aa7a0345f721cc4e09c794a150e8bb6",
-                "reference": "cdddf3739aa7a0345f721cc4e09c794a150e8bb6",
+                "url": "https://api.github.com/repos/vskstudio/takt-symfony/zipball/e21ea8c3a4901daa800c4c2e85b1494f8515df96",
+                "reference": "e21ea8c3a4901daa800c4c2e85b1494f8515df96",
                 "shasum": ""
             },
             "require": {
@@ -2977,7 +2977,7 @@
                 "php": ">=8.1",
                 "symfony/framework-bundle": "^6.4 || ^7.0",
                 "symfony/http-client": "^6.4 || ^7.0",
-                "vskstudio/takt-core-php": "^0.1"
+                "vskstudio/takt-core-php": "^0.3"
             },
             "require-dev": {
                 "friendsofphp/php-cs-fixer": "^3.59",
@@ -3014,7 +3014,7 @@
                 "issues": "https://github.com/vskstudio/takt-symfony/issues",
                 "source": "https://github.com/vskstudio/takt-symfony"
             },
-            "time": "2026-06-12T22:14:41+00:00"
+            "time": "2026-06-19T19:32:52+00:00"
         }
     ],
     "packages-dev": [],

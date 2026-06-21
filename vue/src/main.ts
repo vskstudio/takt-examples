@@ -12,6 +12,10 @@ app.use(TaktPlugin, {
   endpoint: 'https://example.com/api/event',
   track404: true,
   excludeLocalhost: false,
+  // Advanced options (Takt 0.5): keep the query string on pageviews, but only
+  // the listed params (drops everything else, e.g. session ids).
+  trackQuery: true,
+  queryParams: ['utm_source', 'utm_medium', 'utm_campaign'],
   // scriptOrigin: 'https://stats.example.com', // first-party : sert le tracker depuis votre domaine (anti-adblock)
 })
 

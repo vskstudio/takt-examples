@@ -16,6 +16,8 @@ import { TaktService, TaktEventDirective } from '@vskstudio/takt-angular';
       >
         Sign up (declarative)
       </button>
+      <!-- autocaptured by tagged: true (no JS needed) -->
+      <button data-takt-tag="Newsletter">Subscribe (tagged)</button>
     </main>
   `,
 })

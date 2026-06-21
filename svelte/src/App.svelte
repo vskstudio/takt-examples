@@ -12,8 +12,15 @@
 </script>
 
 <!-- Boots core, fires the initial pageview, wires SPA nav. -->
+<!-- Advanced option (Takt 0.5): scrubUrl rewrites the URL before it is sent (here: drop the #fragment). -->
 <!-- scriptOrigin="https://stats.example.com" : sert le tracker depuis votre domaine (first-party / anti-adblock) -->
-<Takt domain="example.com" endpoint="/api/event" track404 excludeLocalhost={false} />
+<Takt
+  domain="example.com"
+  endpoint="/api/event"
+  track404
+  scrubUrl={(url) => url.split('#')[0]}
+  excludeLocalhost={false}
+/>
 
 <main>
   <h1>Takt + Svelte 5</h1>
